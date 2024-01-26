@@ -34,8 +34,7 @@ const options = {
         titleColor: 'rgba(255, 255, 255, 1)',
         message: 'Please choose a date in the future',
         backgroundColor: 'rgba(239, 64, 64, 1)',
-        image: '../public/bi_x-octagon.svg',
-        imageWidth: 24,
+        iconUrl: '../img/bi_x-octagon.svg',
         position: 'topRight',
         messageColor: 'rgba(255, 255, 255, 1)',
       });

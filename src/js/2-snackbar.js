@@ -14,8 +14,7 @@ const makePromise = (delay, state) => {
             message: `Fulfilled promise in ${delay}ms`,
             messageColor: 'rgba(255, 255, 255, 1)',
             backgroundColor: 'rgba(89, 161, 13, 1)',
-            image: '../public/bi_check2-circle.svg',
-            imageWidth: 24,
+            iconUrl: '../img/bi_check2-circle.svg',
             position: 'topRight',
           })
         );
@@ -27,8 +26,7 @@ const makePromise = (delay, state) => {
             message: `Rejected promise in ${delay}ms`,
             messageColor: 'rgba(255, 255, 255, 1)',
             backgroundColor: 'rgba(239, 64, 64, 1)',
-            image: '../public/bi_x-octagon.svg',
-            imageWidth: 24,
+            iconUrl: '../img/bi_x-octagon.svg',
             position: 'topRight',
           })
         );

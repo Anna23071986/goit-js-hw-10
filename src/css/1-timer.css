@@ -115,10 +115,4 @@ button[data-start]:enabled:hover {
 
 .iziToast > .iziToast-body .iziToast-texts .iziToast-title {
   font-weight: 700;
-  margin-left: 8px;
-}
-
-.iziToast-capsule .iziToast > .iziToast-cover {
-  background-color: transparent;
-  margin-left: 20px;
 }
