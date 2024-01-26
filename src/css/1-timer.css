@@ -1,0 +1,124 @@
+body {
+  margin: 0 auto;
+  width: 1128px;
+  background-color: #fff;
+  color: rgba(46, 47, 66, 1);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+input {
+  width: 272px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(128, 128, 128, 1);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 1);
+}
+
+.flatpickr-input:hover {
+  border-color: rgba(0, 0, 0, 1);
+}
+
+.flatpickr-input:focus {
+  border-color: rgba(78, 117, 255, 1);
+  outline: none;
+}
+
+button {
+  width: 75px;
+  padding: 8px 16px;
+  border: none;
+  color: rgba(152, 152, 152, 1);
+  background-color: rgba(207, 207, 207, 1);
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+button:enabled {
+  background-color: #4e75ff;
+  color: rgba(255, 255, 255, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button[data-start]:enabled:hover {
+  background-color: rgba(108, 140, 255, 1);
+}
+
+.dayContainer .flatpickr-day:hover {
+  background-color: rgba(193, 193, 193, 1);
+}
+
+.dayContainer .flatpickr-day.today {
+  border-color: rgba(78, 117, 255, 1);
+}
+
+.dayContainer .flatpickr-day.selected {
+  background: rgba(78, 117, 255, 1);
+}
+.container {
+  display: flex;
+  gap: 8px;
+  width: 355px;
+  margin: auto;
+  margin-bottom: 32px;
+}
+
+.timer {
+  display: flex;
+  width: 346px;
+  gap: 24px;
+  margin: auto;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.value {
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+}
+
+.label {
+  font-size: 16px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.iziToast-capsule .iziToast > .iziToast-close {
+  background: url(/img/bi_x-lg.svg) no-repeat 50% 50%;
+}
+
+.iziToast > .iziToast-body .iziToast-texts .iziToast-message,
+.iziToast > .iziToast-body .iziToast-texts .iziToast-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+.iziToast > .iziToast-body .iziToast-texts .iziToast-title {
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.iziToast-capsule .iziToast > .iziToast-cover {
+  background-color: transparent;
+  margin-left: 20px;
+}
