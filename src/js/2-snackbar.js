@@ -1,5 +1,7 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import errorIcon from '../img/bi_x-octagon.svg';
+import resolveIcon from '../img/bi_check2-circle.svg';
 
 const form = document.querySelector('.form');
 
@@ -14,7 +16,7 @@ const makePromise = (delay, state) => {
             message: `Fulfilled promise in ${delay}ms`,
             messageColor: 'rgba(255, 255, 255, 1)',
             backgroundColor: 'rgba(89, 161, 13, 1)',
-            iconUrl: '../img/bi_check2-circle.svg',
+            iconUrl: resolveIcon,
             position: 'topRight',
           })
         );
@@ -26,7 +28,7 @@ const makePromise = (delay, state) => {
             message: `Rejected promise in ${delay}ms`,
             messageColor: 'rgba(255, 255, 255, 1)',
             backgroundColor: 'rgba(239, 64, 64, 1)',
-            iconUrl: '../img/bi_x-octagon.svg',
+            iconUrl: errorIcon,
             position: 'topRight',
           })
         );
