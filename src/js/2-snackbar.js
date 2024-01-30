@@ -9,29 +9,9 @@ const makePromise = (delay, state) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (state === 'fulfilled') {
-        resolve(
-          iziToast.show({
-            title: 'OK',
-            titleColor: 'rgba(255, 255, 255, 1)',
-            message: `Fulfilled promise in ${delay}ms`,
-            messageColor: 'rgba(255, 255, 255, 1)',
-            backgroundColor: 'rgba(89, 161, 13, 1)',
-            iconUrl: resolveIcon,
-            position: 'topRight',
-          })
-        );
+        resolve(delay);
       } else {
-        reject(
-          iziToast.show({
-            title: 'Error',
-            titleColor: 'rgba(255, 255, 255, 1)',
-            message: `Rejected promise in ${delay}ms`,
-            messageColor: 'rgba(255, 255, 255, 1)',
-            backgroundColor: 'rgba(239, 64, 64, 1)',
-            iconUrl: errorIcon,
-            position: 'topRight',
-          })
-        );
+        reject(delay);
       }
     }, delay);
   });
@@ -45,8 +25,28 @@ function handleSubmit(e) {
   const state = form.elements.state.value;
 
   makePromise(delay, state)
-    .then(value => value)
-    .catch(error => error);
+    .then(delay => {
+      iziToast.show({
+        title: 'OK',
+        titleColor: 'rgba(255, 255, 255, 1)',
+        message: `Fulfilled promise in ${delay}ms`,
+        messageColor: 'rgba(255, 255, 255, 1)',
+        backgroundColor: 'rgba(89, 161, 13, 1)',
+        iconUrl: resolveIcon,
+        position: 'topRight',
+      });
+    })
+    .catch(delay =>
+      iziToast.show({
+        title: 'Error',
+        titleColor: 'rgba(255, 255, 255, 1)',
+        message: `Rejected promise in ${delay}ms`,
+        messageColor: 'rgba(255, 255, 255, 1)',
+        backgroundColor: 'rgba(239, 64, 64, 1)',
+        iconUrl: errorIcon,
+        position: 'topRight',
+      })
+    );
 
   form.reset();
 }
